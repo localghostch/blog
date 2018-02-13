@@ -1,0 +1,17 @@
+{{ partial "header" . }}
+
+<main>
+
+    <div class="intro">
+
+		<h1 style="display:none">localghost</h1>
+
+        {{ with .Site.Params.profilePic }} <img src="{{ . }}" title="localghost Team" alt="localghost Team logo" > {{ end }}
+
+        <h2>{{ markdownify .Site.Params.Description }}</h2>
+
+    </div>
+
+</main>
+
+{{ partial "footer" . }}
