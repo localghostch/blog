@@ -8,7 +8,7 @@ googleAnalytics = ""
 [params]
     author = "localghost Team"
     description = "A swiss ctf team"
-	profilePic = "team.jpg"
+	profilePic = "img/team.jpg"
     githubUsername = "#"
     accent = "#009bfe"
     showBorder = true
