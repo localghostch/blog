@@ -1,4 +1,4 @@
-baseURL = "http://example.com/"
+baseURL = "https://localghost.ch"
 languageCode = "en-us"
 title = "localghost"
 theme = "minimal"
