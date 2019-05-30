@@ -1,0 +1,34 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: cibuilds/hugo:latest
+    working_directory: hugobuild
+    environment:
+      HUGO_BUILD_DIR: hugobuild/public
+      REMOTE_DIR: /
+    steps:
+
+      # install git
+      - run: apk update && apk add git && apk add npm && apk add lftp
+
+      # checkout the repository
+      - checkout
+
+      # install git submodules for managing third-party dependencies
+      - run: git submodule sync && git submodule update --init
+
+      # build with Hugo
+      - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
+
+      # deploy
+      - run: lftp -e "mirror -e -R $HUGO_BUILD_DIR $REMOTE_DIR; quit" -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST 
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+                - master
