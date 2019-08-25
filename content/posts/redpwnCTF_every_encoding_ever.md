@@ -1,5 +1,5 @@
 ---
-title: "RedpwnCTF - Web - Crypt"
+title: "RedpwnCTF - Cryptography - Every Encoding Ever"
 date: 2019-08-16
 draft: false
 ---
@@ -21,4 +21,4 @@ At the end, we got the flag : ```flag{dats_a_lot_of_charsets}```.
 
 P.S. For those who wonder how I found that the encoding is "IBM EBCDIC International (500)", it's by playing with the "Magic" operation and the "Intensive mode" checked. This will "[...] attempt to detect various properties of the input data and suggests which operations could help to make more sense of it".
 
-P.P.S The full CyberChef reicipe address is available [here](https://gchq.github.io/CyberChef/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true)From_Base64('A-Za-z0-9%2B/%3D',true)From_Base64('A-Za-z0-9%2B/%3D',true)From_Base64('A-Za-z0-9%2B/%3D',true)From_Base64('A-Za-z0-9%2B/%3D',true)From_Base64('A-Za-z0-9%2B/%3D',true)From_Base64('A-Za-z0-9%2B/%3D',true)From_Base64('A-Za-z0-9%2B/%3D',true)Decode_text('UTF16LE%20(1200)')From_Base64('A-Za-z0-9%2B/%3D',true)Decode_text('UTF16BE%20(1201)')From_Base64('A-Za-z0-9%2B/%3D',true)From_Base64('A-Za-z0-9%2B/%3D',true)From_Base64('A-Za-z0-9%2B/%3D',true)From_Base64('A-Za-z0-9%2B/%3D',true)From_Base64('A-Za-z0-9%2B/%3D',true)Decode_text('IBM%20EBCDIC%20International%20(500)')From_Base64('A-Za-z0-9%2B/%3D',true)Decode_text('IBM%20EBCDIC%20International%20(500)')From_Base64('A-Za-z0-9%2B/%3D',true)Decode_text('IBM%20EBCDIC%20International%20(500)')From_Base64('A-Za-z0-9%2B/%3D',true)From_Base64('A-Za-z0-9%2B/%3D',true)). You just have to put the "out.txt" in the input textarea.
+P.P.S The full CyberChef reicipe address is available [here](http://tiny.cc/ctfpbz). You just have to put the "out.txt" in the input textarea.
