@@ -10,7 +10,7 @@ jobs:
     steps:
 
       # install git
-      - run: apk update && apk add git && apk add npm && apk add lftp
+      - run: apt update && apt install git npm lftp -y
 
       # checkout the repository
       - checkout
