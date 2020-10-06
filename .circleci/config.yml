@@ -10,7 +10,7 @@ jobs:
     steps:
 
       # install git
-      - run: apt update && apt install git npm lftp -y
+      - run: sudo apt update && sudo apt install git npm lftp -y
 
       # checkout the repository
       - checkout
